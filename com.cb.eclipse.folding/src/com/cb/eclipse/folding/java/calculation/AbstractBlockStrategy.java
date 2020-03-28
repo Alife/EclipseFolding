@@ -79,7 +79,7 @@ public abstract class AbstractBlockStrategy extends AbstractCalculationStrategy 
 					if (shouldFold(owner, token)) {
 						boolean doCollapse = shouldCollapse(owner, token);
 						boolean shouldNegate = shouldFilterLastLine(owner, token);
-						addRegion(new EnhancedPosition(oldStart, end - oldStart, new JavaPositionMetadata(false, shouldNegate, doCollapse, true, getClass().getName())));
+						addRegion(new EnhancedPosition(oldStart, end - oldStart + 2, new JavaPositionMetadata(false, shouldNegate, doCollapse, true, getClass().getName())));
 					}
 				}
 				else {
